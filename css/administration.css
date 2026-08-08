@@ -1,0 +1,70 @@
+/* ================================
+      ADMINISTRATION SECTION
+================================ */
+
+.administration{
+
+    padding:100px 8%;
+    background:#050816;
+
+}
+
+.admin-grid{
+
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:40px;
+    margin-top:60px;
+
+}
+
+.admin-card{
+
+    background:rgba(255,255,255,.05);
+    backdrop-filter:blur(18px);
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:25px;
+    text-align:center;
+    padding:35px;
+    transition:.4s;
+
+}
+
+.admin-card:hover{
+
+    transform:translateY(-12px);
+    box-shadow:0 0 35px rgba(0,217,255,.35);
+
+}
+
+.admin-card img{
+
+    width:190px;
+    height:190px;
+    object-fit:cover;
+    border-radius:50%;
+    margin:auto;
+    border:5px solid #00d9ff;
+    margin-bottom:25px;
+
+}
+
+.admin-card h3{
+
+    font-size:28px;
+    margin-bottom:10px;
+
+}
+
+.admin-card h4{
+
+    color:#00d9ff;
+    margin-bottom:12px;
+
+}
+
+.admin-card p{
+
+    color:#bdbdbd;
+
+}

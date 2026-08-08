@@ -1,0 +1,1422 @@
+/* =====================================================
+   TECHVERSA 2026 REGISTRATION
+   Part 1
+===================================================== */
+
+/* RESET */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:
+    linear-gradient(135deg,#0f172a,#111827,#1e293b);
+    min-height:100vh;
+    color:#fff;
+    overflow-x:hidden;
+}
+
+/* ========================================= */
+
+:root{
+
+    --primary:#00e5ff;
+    --secondary:#7c3aed;
+    --success:#22c55e;
+    --danger:#ef4444;
+    --warning:#f59e0b;
+
+    --glass:
+    rgba(255,255,255,.08);
+
+    --glassBorder:
+    rgba(255,255,255,.15);
+
+    --shadow:
+    0 15px 40px rgba(0,0,0,.35);
+
+    --radius:20px;
+
+    --transition:.35s ease;
+
+}
+
+/* ========================================= */
+/* Scrollbar */
+/* ========================================= */
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#111827;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:var(--primary);
+    border-radius:20px;
+
+}
+
+/* ========================================= */
+/* Registration Section */
+/* ========================================= */
+
+.registration{
+
+    width:100%;
+    min-height:100vh;
+
+    padding:
+
+    120px
+    30px
+    80px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:flex-start;
+
+}
+
+/* ========================================= */
+
+.registration-container{
+
+    width:100%;
+    max-width:1250px;
+
+    background:var(--glass);
+
+    backdrop-filter:blur(25px);
+
+    border:1px solid var(--glassBorder);
+
+    border-radius:30px;
+
+    box-shadow:var(--shadow);
+
+    padding:45px;
+
+}
+
+/* ========================================= */
+
+.registration-header{
+
+    text-align:center;
+
+    margin-bottom:45px;
+
+}
+
+.registration-header span{
+
+    color:var(--primary);
+
+    font-weight:600;
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+
+}
+
+.registration-header h1{
+
+    font-size:3rem;
+
+    margin-top:12px;
+
+    font-weight:700;
+
+}
+
+.registration-header p{
+
+    margin-top:10px;
+
+    color:#d1d5db;
+
+    font-size:16px;
+
+}
+
+/* ========================================= */
+/* Progress Bar */
+/* ========================================= */
+
+.progress-bar{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:50px;
+
+    position:relative;
+
+}
+
+.progress-bar::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:100%;
+
+    height:4px;
+
+    background:
+
+    rgba(255,255,255,.15);
+
+    top:22px;
+
+    left:0;
+
+    z-index:0;
+
+}
+
+.progress-step{
+
+    position:relative;
+
+    z-index:2;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    gap:10px;
+
+}
+
+.progress-step .circle{
+
+    width:45px;
+
+    height:45px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-weight:700;
+
+    background:#374151;
+
+    transition:var(--transition);
+
+}
+
+.progress-step span{
+
+    font-size:14px;
+
+    color:#cbd5e1;
+
+}
+
+.progress-step.active .circle{
+
+    background:
+
+    linear-gradient(
+    135deg,
+    var(--primary),
+    var(--secondary));
+
+    box-shadow:
+
+    0 0 25px
+    rgba(0,229,255,.5);
+
+}
+
+.progress-step.active span{
+
+    color:white;
+
+    font-weight:600;
+
+}
+
+/* ========================================= */
+/* FORM */
+/* ========================================= */
+
+form{
+
+    width:100%;
+
+}
+
+/* ========================================= */
+
+.step{
+
+    display:none;
+
+    animation:
+
+    fadeSlide .45s ease;
+
+}
+
+.step.active{
+
+    display:block;
+
+}
+
+/* ========================================= */
+
+@keyframes fadeSlide{
+
+    from{
+
+        opacity:0;
+
+        transform:
+
+        translateY(25px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+
+        translateY(0);
+
+    }
+
+}
+
+/* ========================================= */
+
+.step h2{
+
+    font-size:2rem;
+
+    margin-bottom:10px;
+
+}
+
+.subtitle{
+
+    color:#cbd5e1;
+
+    margin-bottom:35px;
+
+}
+
+/* ========================================= */
+/* Grid */
+/* ========================================= */
+
+.form-grid{
+
+    display:grid;
+
+    grid-template-columns:
+
+    repeat(auto-fit,minmax(280px,1fr));
+
+    gap:22px;
+
+}
+
+/* ========================================= */
+
+.input-box{
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.input-box label{
+
+    margin-bottom:10px;
+
+    color:#fff;
+
+    font-weight:500;
+
+}
+
+.input-box input,
+
+.input-box select,
+
+.input-box textarea{
+
+    background:
+
+    rgba(255,255,255,.08);
+
+    border:
+
+    1px solid rgba(255,255,255,.15);
+
+    color:white;
+
+    padding:15px;
+
+    border-radius:15px;
+
+    outline:none;
+
+    transition:var(--transition);
+
+    font-size:15px;
+.input-box select option{
+
+    background:#2b3245;
+
+    color:#ffffff;
+
+}
+}
+
+.input-box input:focus,
+
+.input-box select:focus,
+
+.input-box textarea:focus{
+
+    border-color:var(--primary);
+
+    box-shadow:
+
+    0 0 20px
+
+    rgba(0,229,255,.25);
+
+}
+
+.input-box input::placeholder{
+
+    color:#d1d5db;
+
+}
+
+/* ========================================= */
+/* Buttons */
+/* ========================================= */
+
+.btn-group,
+
+.button-group{
+
+    margin-top:40px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    gap:20px;
+
+}
+
+.btn-primary,
+
+.btn-secondary{
+
+    border:none;
+
+    cursor:pointer;
+
+    padding:
+
+    14px
+    28px;
+
+    border-radius:15px;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    transition:var(--transition);
+
+}
+
+.btn-primary{
+
+    background:
+
+    linear-gradient(
+    135deg,
+    var(--primary),
+    var(--secondary));
+
+    color:white;
+
+}
+
+.btn-primary:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:
+
+    0 10px 30px
+
+    rgba(0,229,255,.35);
+
+}
+
+.btn-secondary{
+
+    background:
+
+    rgba(255,255,255,.08);
+
+    color:white;
+
+}
+
+.btn-secondary:hover{
+
+    background:
+
+    rgba(255,255,255,.15);
+
+}
+/* =====================================================
+   EVENT CARDS
+===================================================== */
+
+.events-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+    gap:25px;
+
+    margin-top:30px;
+
+}
+
+.event-card{
+
+    position:relative;
+
+    background:rgba(255,255,255,.06);
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.12);
+
+    border-radius:22px;
+
+    padding:30px 25px;
+
+    cursor:pointer;
+
+    transition:all .35s ease;
+
+    overflow:hidden;
+
+}
+
+.event-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:linear-gradient(
+        135deg,
+        rgba(0,229,255,.12),
+        rgba(124,58,237,.12)
+    );
+
+    opacity:0;
+
+    transition:.35s;
+
+}
+
+.event-card:hover{
+
+    transform:translateY(-8px);
+
+    border-color:var(--primary);
+
+    box-shadow:0 20px 45px rgba(0,0,0,.35);
+
+}
+
+.event-card:hover::before{
+
+    opacity:1;
+
+}
+
+.event-card.selected{
+
+    border:2px solid var(--primary);
+
+    box-shadow:0 0 30px rgba(0,229,255,.45);
+
+    transform:translateY(-8px);
+
+}
+
+.event-icon{
+
+    width:70px;
+
+    height:70px;
+
+    border-radius:18px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    margin-bottom:20px;
+
+    background:linear-gradient(
+        135deg,
+        var(--primary),
+        var(--secondary)
+    );
+
+    font-size:30px;
+
+    color:#fff;
+
+}
+
+.event-card h3{
+
+    font-size:24px;
+
+    margin-bottom:10px;
+
+}
+
+.event-card p{
+
+    color:#cbd5e1;
+
+    margin-bottom:20px;
+
+    line-height:1.6;
+
+}
+
+.event-meta,
+.event-details{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:12px;
+
+    flex-wrap:wrap;
+
+}
+
+.event-meta span,
+.event-details span{
+
+    font-size:14px;
+
+}
+
+.free,
+.free-badge{
+
+    background:#16a34a;
+
+    color:#fff;
+
+    padding:6px 14px;
+
+    border-radius:50px;
+
+    font-size:13px;
+
+    font-weight:600;
+
+}
+
+.paid,
+.paid-badge{
+
+    background:#f59e0b;
+
+    color:#fff;
+
+    padding:6px 14px;
+
+    border-radius:50px;
+
+    font-size:13px;
+
+    font-weight:600;
+
+}
+
+/* =====================================================
+   TEAM SECTION
+===================================================== */
+
+#teamContainer{
+
+    display:grid;
+
+    gap:25px;
+
+    margin-top:30px;
+
+}
+
+.team-card{
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.12);
+
+    border-radius:20px;
+
+    padding:25px;
+
+    backdrop-filter:blur(18px);
+
+}
+
+.team-card h3{
+
+    margin-bottom:20px;
+
+    color:var(--primary);
+
+    font-size:22px;
+
+}
+
+.team-card .form-grid{
+
+    margin-top:10px;
+
+}
+
+.team-card input{
+
+    background:rgba(255,255,255,.08);
+
+}
+
+/* =====================================================
+   PAYMENT SECTION
+===================================================== */
+
+.payment-section{
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.12);
+
+    border-radius:22px;
+
+    padding:30px;
+
+    margin-bottom:35px;
+
+}
+
+.payment-note{
+
+    margin:15px 0 25px;
+
+    color:#d1d5db;
+
+}
+
+.payment-box{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:30px;
+
+    flex-wrap:wrap;
+
+    background:rgba(255,255,255,.04);
+
+    border-radius:18px;
+
+    padding:20px;
+
+    margin-bottom:25px;
+
+}
+
+.payment-qr{
+
+    width:220px;
+
+    border-radius:18px;
+
+    background:#fff;
+
+    padding:10px;
+
+}
+
+.payment-details h4{
+
+    color:var(--primary);
+
+    margin-bottom:8px;
+
+}
+
+.payment-details h3{
+
+    margin-top:10px;
+
+    font-size:28px;
+
+}
+
+/* =====================================================
+   REVIEW
+===================================================== */
+
+.review-section{
+
+    margin-top:30px;
+
+}
+
+.review-card{
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.12);
+
+    border-radius:20px;
+
+    padding:25px;
+
+    margin-bottom:20px;
+
+}
+
+.review-card h3{
+
+    color:var(--primary);
+
+    margin-bottom:15px;
+
+}
+
+.review-row{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    gap:20px;
+
+    padding:12px 0;
+
+    border-bottom:1px solid rgba(255,255,255,.08);
+
+}
+
+.review-row:last-child{
+
+    border-bottom:none;
+
+}
+
+.review-label{
+
+    color:#cbd5e1;
+
+    font-weight:500;
+
+}
+
+.review-value{
+
+    font-weight:600;
+
+    text-align:right;
+
+}
+/* =====================================================
+   SUCCESS PAGE
+===================================================== */
+
+.success-page{
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(5,8,22,.95);
+
+    backdrop-filter:blur(15px);
+
+    display:none;
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:9999;
+
+    padding:20px;
+
+}
+
+.success-page.show{
+
+    display:flex;
+
+}
+
+.success-card{
+
+    width:100%;
+
+    max-width:550px;
+
+    background:rgba(255,255,255,.08);
+
+    border:1px solid rgba(255,255,255,.15);
+
+    border-radius:30px;
+
+    padding:45px;
+
+    text-align:center;
+
+    box-shadow:0 20px 60px rgba(0,0,0,.45);
+
+    animation:pop .45s ease;
+
+}
+
+.success-card i{
+
+    font-size:80px;
+
+    color:#22c55e;
+
+    margin-bottom:20px;
+
+}
+
+.success-card h2{
+
+    font-size:34px;
+
+    margin-bottom:12px;
+
+}
+
+.success-card p{
+
+    color:#d1d5db;
+
+    margin-bottom:20px;
+
+}
+
+#registrationId{
+
+    display:inline-block;
+
+    margin:20px 0;
+
+    padding:12px 25px;
+
+    border-radius:15px;
+
+    background:linear-gradient(
+        135deg,
+        var(--primary),
+        var(--secondary)
+    );
+
+    font-size:22px;
+
+    font-weight:700;
+
+    letter-spacing:1px;
+
+}
+
+/* =====================================================
+   QR CODE
+===================================================== */
+
+#qrCode{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    margin:30px 0;
+
+}
+
+#qrCode canvas,
+#qrCode img{
+
+    background:#fff;
+
+    padding:15px;
+
+    border-radius:18px;
+
+}
+
+/* =====================================================
+   FILE INPUT
+===================================================== */
+
+input[type="file"]{
+
+    padding:14px;
+
+    cursor:pointer;
+
+}
+
+input[type="file"]::file-selector-button{
+
+    border:none;
+
+    padding:10px 18px;
+
+    border-radius:10px;
+
+    background:var(--primary);
+
+    color:#fff;
+
+    cursor:pointer;
+
+    margin-right:15px;
+
+}
+
+/* =====================================================
+   LOADING BUTTON
+===================================================== */
+
+.btn-loading{
+
+    pointer-events:none;
+
+    opacity:.75;
+
+}
+
+.btn-loading::after{
+
+    content:"";
+
+    width:18px;
+
+    height:18px;
+
+    border:3px solid rgba(255,255,255,.4);
+
+    border-top-color:#fff;
+
+    border-radius:50%;
+
+    display:inline-block;
+
+    margin-left:12px;
+
+    vertical-align:middle;
+
+    animation:spin .8s linear infinite;
+
+}
+
+/* =====================================================
+   VALIDATION
+===================================================== */
+
+.error{
+
+    border:1px solid #ef4444 !important;
+
+    box-shadow:0 0 15px rgba(239,68,68,.3);
+
+}
+
+.success{
+
+    border:1px solid #22c55e !important;
+
+}
+
+.error-message{
+
+    color:#ef4444;
+
+    font-size:13px;
+
+    margin-top:8px;
+
+}
+
+/* =====================================================
+   ANIMATIONS
+===================================================== */
+
+@keyframes spin{
+
+    from{
+
+        transform:rotate(0deg);
+
+    }
+
+    to{
+
+        transform:rotate(360deg);
+
+    }
+
+}
+
+@keyframes pop{
+
+    from{
+
+        opacity:0;
+
+        transform:scale(.8);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:scale(1);
+
+    }
+
+}
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media(max-width:1024px){
+
+    .registration-container{
+
+        padding:35px;
+
+    }
+
+    .events-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .registration{
+
+        padding:90px 15px 40px;
+
+    }
+
+    .registration-container{
+
+        padding:25px;
+
+    }
+
+    .registration-header h1{
+
+        font-size:2.2rem;
+
+    }
+
+    .progress-bar{
+
+        overflow-x:auto;
+
+        gap:25px;
+
+        padding-bottom:10px;
+
+    }
+
+    .progress-step{
+
+        min-width:80px;
+
+    }
+
+    .form-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .events-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .payment-box{
+
+        flex-direction:column;
+
+        text-align:center;
+
+    }
+
+    .payment-qr{
+
+        width:180px;
+
+    }
+
+    .review-row{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        gap:8px;
+
+    }
+
+    .review-value{
+
+        text-align:left;
+
+    }
+
+    .btn-group,
+    .button-group{
+
+        flex-direction:column;
+
+    }
+
+    .btn-primary,
+    .btn-secondary{
+
+        width:100%;
+
+    }
+
+}
+
+@media(max-width:480px){
+
+    .registration-header h1{
+
+        font-size:1.8rem;
+
+    }
+
+    .step h2{
+
+        font-size:1.5rem;
+
+    }
+
+    .success-card{
+
+        padding:30px 20px;
+
+    }
+
+    .success-card h2{
+
+        font-size:26px;
+
+    }
+
+    #registrationId{
+
+        font-size:18px;
+
+        width:100%;
+
+    }
+
+    .event-card{
+
+        padding:22px;
+
+    }
+
+    .event-icon{
+
+        width:60px;
+
+        height:60px;
+
+        font-size:24px;
+
+    }
+
+}
+
+
+/* =====================================================
+   END OF FILE
+===================================================== */
+select option{
+    background:#1e293b;
+    color:#fff;
+}
+.success-modal{
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.65);
+
+    display:none;
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:99999;
+
+}
+
+.success-modal.show{
+
+    display:flex;
+
+}
+
+.success-box{
+
+    width:420px;
+
+    max-width:90%;
+
+    background:#1f2937;
+
+    color:#fff;
+
+    border-radius:20px;
+
+    padding:30px;
+
+    text-align:center;
+
+    box-shadow:0 20px 60px rgba(0,0,0,.4);
+
+}
+
+.success-icon{
+
+    font-size:60px;
+
+    margin-bottom:15px;
+
+}
+
+.receipt{
+
+    margin:25px 0;
+
+}
+
+.receipt .row{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    padding:12px 0;
+
+    border-bottom:1px solid rgba(255,255,255,.08);
+
+}
+
+.popup-btn{
+
+    width:100%;
+
+    border:none;
+
+    padding:14px;
+
+    border-radius:12px;
+
+    background:#00c8ff;
+
+    color:#fff;
+
+    font-size:17px;
+
+    cursor:pointer;
+
+}

@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TechVersa 2026 | Events</title>
+
+    <!-- Google Font -->
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- CSS -->
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/events.css">
+
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header>
+
+        <nav class="navbar">
+
+            <div class="logo">
+
+                <img src="images/logo/logo.png">
+
+                <div class="logo-text">
+
+                    <h2>TECHVERSA 2026</h2>
+
+                    <span>Computer Science Department</span>
+
+                </div>
+
+            </div>
+
+            <ul class="nav-links">
+
+    <li><a href="index.html">Home</a></li>
+
+    <li><a href="events.html" class="active">Events</a></li>
+
+    <li><a href="registration.html">Register</a></li>
+
+</ul>
+
+        </nav>
+
+    </header>
+
+    <!-- ================= EVENTS ================= -->
+
+    <section class="events">
+
+        <div class="section-title">
+
+            <span>TECHVERSA 2026</span>
+
+            <h2>Computer Science Events</h2>
+
+            <p>
+
+                Participate in exciting technical competitions,
+                enhance your skills and showcase your talent.
+
+            </p>
+
+        </div>
+
+        <div class="event-grid">
+
+            <!-- Card 1 -->
+
+            <div class="event-card">
+
+                <div class="event-icon">
+
+                    <i class="fa-solid fa-display"></i>
+
+                </div>
+
+                <h3>Vision Vault</h3>
+
+                <p>PPT Presentation</p>
+
+                <div class="event-info">
+
+                    <span>👥 Team of 2</span>
+
+                    <span>💰 FREE</span>
+
+                </div>
+
+                <a href="#" class="learn-btn">
+
+                    Learn More
+
+                </a>
+
+            </div>
+
+            <!-- Card 2 -->
+
+            <div class="event-card">
+
+                <div class="event-icon">
+
+                    <i class="fa-solid fa-brain"></i>
+
+                </div>
+
+                <h3>Brain Blitz</h3>
+
+                <p>Technical Quiz</p>
+
+                <div class="event-info">
+
+                    <span>👥 Team of 4</span>
+
+                    <span>💰 FREE</span>
+
+                </div>
+
+                <a href="#" class="learn-btn">
+
+                    Learn More
+
+                </a>
+
+            </div>
+
+            <!-- Card 3 -->
+
+            <div class="event-card">
+
+                <div class="event-icon">
+
+                    <i class="fa-solid fa-book"></i>
+
+                </div>
+
+                <h3>Code Quest</h3>
+
+                <p>Find the Code Using Story</p>
+
+                <div class="event-info">
+
+                    <span>👤 Individual</span>
+
+                    <span>💰 FREE</span>
+
+                </div>
+
+                <a href="#" class="learn-btn">
+
+                    Learn More
+
+                </a>
+
+            </div>
+
+            <!-- Card 4 -->
+
+            <div class="event-card">
+
+                <div class="event-icon">
+
+                    <i class="fa-solid fa-code"></i>
+
+                </div>
+
+                <h3>Blind Byte</h3>
+
+                <p>Blind Coding</p>
+
+                <div class="event-info">
+
+                    <span>👤 Individual</span>
+
+                    <span>💰 FREE</span>
+
+                </div>
+
+                <a href="#" class="learn-btn">
+
+                    Learn More
+
+                </a>
+
+            </div>
+
+            <!-- Card 5 -->
+
+            <div class="event-card">
+
+                <div class="event-icon">
+
+                    <i class="fa-solid fa-lightbulb"></i>
+
+                </div>
+
+                <h3>Ideathon</h3>
+
+                <p>Innovation Challenge</p>
+
+                <div class="event-info">
+
+                    <span>👥 Team of 3</span>
+
+                    <span>💰 ₹300 / Team</span>
+
+                </div>
+
+                <a href="#" class="learn-btn">
+
+                    Learn More
+
+                </a>
+
+            </div>
+
+            <!-- Card 6 -->
+
+            <div class="event-card">
+
+                <div class="event-icon">
+
+                    <i class="fa-solid fa-laptop-code"></i>
+
+                </div>
+
+                <h3>Hackathon</h3>
+
+                <p>Software Development</p>
+
+                <div class="event-info">
+
+                    <span>👥 Team of 3</span>
+
+                    <span>💰 ₹300 / Team</span>
+
+                </div>
+
+                <a href="#" class="learn-btn">
+
+                    Learn More
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+   <!-- ================= EVENT MODAL ================= -->
+
+<div class="event-modal" id="eventModal">
+
+    <div class="modal-content">
+
+        <span class="close-btn" id="closeModal">&times;</span>
+
+        <h2 id="modalTitle"></h2>
+
+        <h4 id="modalSubtitle"></h4>
+
+        <div class="modal-info">
+
+            <p><strong>👥 Team :</strong> <span id="modalMembers"></span></p>
+
+            <p><strong>💰 Entry Fee :</strong> <span id="modalFee"></span></p>
+
+            <p><strong>⏰ Duration :</strong> <span id="modalDuration"></span></p>
+
+            <p><strong>⭐ Difficulty :</strong> <span id="modalDifficulty"></span></p>
+
+        </div>
+
+        <h3>Description</h3>
+
+        <p id="modalDescription"></p>
+
+        <h3>Rules</h3>
+
+        <ul id="modalRules"></ul>
+
+        <div class="modal-buttons">
+
+            <a href="registration.html" class="register-modal-btn">
+
+                Register Now
+
+            </a>
+
+        </div>
+
+    </div>
+
+</div> 
+<script src="js/events.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TechVersa 2026 | Registration</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/registration.css">
+<!-- Choices.js CSS -->
+<link rel="stylesheet"
+href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css">
+
+<!-- Choices.js JS -->
+<script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar">
+
+        <div class="logo">
+
+            <img src="images/logo/logo.png" alt="Logo">
+
+            <div class="logo-text">
+
+                <h2>TECHVERSA 2026</h2>
+
+                <span>Department of Computer Science</span>
+
+            </div>
+
+        </div>
+
+        <ul class="nav-links">
+
+    <li><a href="index.html">Home</a></li>
+
+    <li><a href="events.html">Events</a></li>
+
+    <li><a href="registration.html" class="active">Register</a></li>
+
+</ul>
+
+    </header>
+
+    <!-- ================= REGISTRATION ================= -->
+
+    <section class="registration">
+
+        <div class="registration-container">
+
+            <div class="registration-header">
+
+                <span>TECHVERSA 2026</span>
+
+                <h1>Event Registration</h1>
+
+                <p>
+
+                    Complete the registration in four simple steps.
+
+                </p>
+
+            </div>
+
+            <!-- Progress -->
+
+            <div class="progress-bar">
+
+                <div class="progress-step active">
+
+                    <div class="circle">1</div>
+
+                    <span>Details</span>
+
+                </div>
+
+                <div class="progress-step">
+
+                    <div class="circle">2</div>
+
+                    <span>Event</span>
+
+                </div>
+
+                <div class="progress-step">
+
+                    <div class="circle">3</div>
+
+                    <span>Team</span>
+
+                </div>
+
+                <div class="progress-step">
+
+                    <div class="circle">4</div>
+
+                    <span>Review</span>
+
+                </div>
+
+            </div>
+
+            <!-- FORM -->
+
+            <form id="registrationForm">
+
+                <!-- STEP 1 -->
+
+                <div class="step active" id="step1">
+
+                    <h2>Participant Details</h2>
+
+                    <div class="form-grid">
+
+                        <div class="input-box">
+
+                            <label>Full Name</label>
+
+                            <input type="text" id="fullName" required>
+
+                        </div>
+
+                        <div class="input-box">
+
+                            <label>Roll Number</label>
+
+                            <input type="text" id="rollNumber" required>
+
+                        </div>
+
+                        <div class="input-box">
+
+                            <label>College Name</label>
+
+                            <input type="text" id="college" required>
+
+                        </div>
+
+                        <div class="input-box">
+
+                            <label>Course</label>
+
+                            <select id="course" required>
+
+    <option value="">Select Course</option>
+
+    <option>B.Sc</option>
+
+    <option>BCA</option>
+
+    <option>B.Com</option>
+
+    <option>AI</option>
+
+    <option>DS</option>
+
+</select>
+
+                        </div>
+
+                        <div class="input-box">
+
+                            <label>Branch</label>
+
+                            <select id="branch" required>
+
+    <option value="">Select Campus</option>
+
+    <option>Aditya Degree College - Gajuwaka</option>
+
+    <option>Aditya Women's Degree College</option>
+
+    <option>Aditya Degree College - Gopalapatnam</option>
+
+    <option>Aditya Degree College - Ramnagar</option>
+
+    <option>Aditya Degree College - Asilmetta</option>
+
+    <option>Aditya Degree College - Dabagardens</option>
+
+    <option>Aditya Degree College - Anakapalle</option>
+
+</select>
+
+                        </div>
+
+                        <div class="input-box">
+
+                            <label>Year</label>
+
+              <select id="year" required>
+
+    <option value="">Select Year</option>
+
+    <option>1st Year</option>
+
+    <option>2nd Year</option>
+
+    <option>3rd Year</option>
+
+</select>
+
+                        </div>
+
+                        <div class="input-box">
+
+                            <label>Mobile Number</label>
+
+                            <input type="tel"
+                                maxlength="10"
+                                id="mobile"
+                                required>
+
+                        </div>
+
+                        <div class="input-box">
+
+                            <label>Email Address</label>
+
+                            <input type="email"
+                                id="email"
+                                required>
+
+                        </div>
+
+                    </div>
+
+                    <div class="btn-group">
+
+                        <button
+                            type="button"
+                            id="next1"
+                            class="btn-primary">
+
+                            Next →
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <!-- ================= STEP 2 ================= -->
+
+<div class="step" id="step2">
+
+    <h2>Select Your Event</h2>
+
+    <p class="subtitle">
+        Choose only ONE event for registration.
+    </p>
+
+    <div class="events-grid">
+
+        <!-- Vision Vault -->
+
+        <div class="event-card"
+             data-event="Vision Vault"
+             data-team="2"
+             data-fee="0">
+
+            <div class="event-icon">
+                <i class="fa-solid fa-display"></i>
+            </div>
+
+            <h3>Vision Vault</h3>
+
+            <p>PPT Presentation Competition</p>
+
+            <div class="event-meta">
+
+                <span>
+                    <i class="fa-solid fa-users"></i>
+                    Team of 2
+                </span>
+
+                <span class="free">FREE</span>
+
+            </div>
+
+        </div>
+
+        <!-- Brain Blitz -->
+
+        <div class="event-card"
+             data-event="Brain Blitz"
+             data-team="4"
+             data-fee="0">
+
+            <div class="event-icon">
+                <i class="fa-solid fa-brain"></i>
+            </div>
+
+            <h3>Brain Blitz</h3>
+
+            <p>Technical Quiz Competition</p>
+
+            <div class="event-meta">
+
+                <span>
+                    <i class="fa-solid fa-users"></i>
+                    Team of 4
+                </span>
+
+                <span class="free">FREE</span>
+
+            </div>
+
+        </div>
+
+        <!-- Code Quest -->
+
+        <div class="event-card"
+             data-event="Code Quest"
+             data-team="1"
+             data-fee="0">
+
+            <div class="event-icon">
+                <i class="fa-solid fa-code"></i>
+            </div>
+
+            <h3>Code Quest</h3>
+
+            <p>Find the Code Using Story</p>
+
+            <div class="event-meta">
+
+                <span>
+                    <i class="fa-solid fa-user"></i>
+                    Individual
+                </span>
+
+                <span class="free">FREE</span>
+
+            </div>
+
+        </div>
+
+        <!-- Blind Byte -->
+
+        <div class="event-card"
+             data-event="Blind Byte"
+             data-team="1"
+             data-fee="0">
+
+            <div class="event-icon">
+                <i class="fa-solid fa-eye-slash"></i>
+            </div>
+
+            <h3>Blind Byte</h3>
+
+            <p>Blind Coding Challenge</p>
+
+            <div class="event-meta">
+
+                <span>
+                    <i class="fa-solid fa-user"></i>
+                    Individual
+                </span>
+
+                <span class="free">FREE</span>
+
+            </div>
+
+        </div>
+
+        <!-- Ideathon -->
+
+        <div class="event-card"
+             data-event="Ideathon"
+             data-team="3"
+             data-fee="300">
+
+            <div class="event-icon">
+                <i class="fa-solid fa-lightbulb"></i>
+            </div>
+
+            <h3>Ideathon</h3>
+
+            <p>Innovation & Startup Ideas</p>
+
+            <div class="event-meta">
+
+                <span>
+                    <i class="fa-solid fa-users"></i>
+                    Team of 3
+                </span>
+
+                <span class="paid">₹300 / Team</span>
+
+            </div>
+
+        </div>
+
+        <!-- Hackathon -->
+
+        <div class="event-card"
+             data-event="Hackathon"
+             data-team="3"
+             data-fee="300">
+
+            <div class="event-icon">
+                <i class="fa-solid fa-laptop-code"></i>
+            </div>
+
+            <h3>Hackathon</h3>
+
+            <p>24-Hour Software Development Challenge</p>
+
+            <div class="event-meta">
+
+                <span>
+                    <i class="fa-solid fa-users"></i>
+                    Team of 3
+                </span>
+
+                <span class="paid">₹300 / Team</span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="button-group">
+
+        <button
+            type="button"
+            id="prevStep2"
+            class="btn-secondary">
+
+            ← Previous
+
+        </button>
+
+        <button
+            type="button"
+            id="nextStep2"
+            class="btn-primary">
+
+            Next →
+
+        </button>
+
+    </div>
+
+</div>
+<!-- ================= STEP 3 ================= -->
+
+
+<div class="step" id="step3">
+
+    <h2>Team Details</h2>
+
+    <p class="subtitle">
+        Team member fields will be generated automatically based on your selected event.
+    </p>
+
+    <div id="teamContainer">
+
+        <!-- JavaScript will generate the team member fields here -->
+
+    </div>
+
+    <div class="button-group">
+
+        <button
+            type="button"
+            id="prevStep3"
+            class="btn-secondary">
+
+            ← Previous
+
+        </button>
+
+        <button
+            type="button"
+            id="nextStep3"
+            class="btn-primary">
+
+            Next →
+
+        </button>
+
+    </div>
+
+</div>
+
+<!-- ================= STEP 4 ================= -->
+
+<div class="step" id="step4">
+
+    <h2>Payment & Review</h2>
+
+    <!-- PAYMENT -->
+
+    <div id="paymentSection" class="payment-section">
+
+        <h3>Registration Fee</h3>
+
+        <p class="payment-note">
+
+            This event requires a payment of
+
+            <strong>₹300 per Team</strong>
+
+        </p>
+
+        <div class="payment-box">
+<img
+    src="images/payment/phonepe.png"
+    alt="PhonePe QR"
+    class="payment-qr">
+
+            <div class="payment-details">
+
+                <h4>PhonePe</h4>
+
+                <p>Mobile Number</p>
+
+                <h3>6309596158</h3>
+
+            </div>
+
+        </div>
+
+        <div class="input-box">
+
+            <label>Upload Payment Screenshot</label>
+
+            <input
+                type="file"
+                id="paymentScreenshot"
+                accept="image/*">
+
+        </div>
+
+    </div>
+
+    <!-- REVIEW -->
+
+    <div class="review-section">
+
+        <h3>Review Registration</h3>
+
+        <div id="reviewContainer"></div>
+
+    </div>
+
+    <div class="btn-group">
+
+        <button
+            type="button"
+            id="prevStep4"
+            class="btn-secondary">
+
+            ← Previous
+
+        </button>
+
+        <button
+            type="submit"
+            id="submitBtn"
+            class="btn-primary">
+
+            Complete Registration
+
+        </button>
+
+    </div>
+
+</div>
+
+<!-- SUCCESS -->
+
+<div
+    id="successPage"
+    class="success-page">
+
+    <div class="success-card">
+
+        <i class="fa-solid fa-circle-check"></i>
+
+        <h2>Registration Successful</h2>
+
+        <p>
+
+            Thank you for registering for
+
+            <strong>TechVersa 2026</strong>
+
+        </p>
+
+        <h3 id="registrationId">
+
+            TV2026-0001
+
+        </h3>
+
+        <div id="qrCode"></div>
+
+        <button
+            class="btn-primary"
+            onclick="window.location='index.html'">
+
+            Back to Home
+
+        </button>
+
+    </div>
+
+</div>
+
+<!-- Hidden Fields -->
+
+<input
+    type="hidden"
+    id="selectedEvent">
+
+<input
+    type="hidden"
+    id="teamSize">
+
+<input
+    type="hidden"
+    id="registrationFee">
+
+</form>
+
+</div>
+
+</section>
+
+<!-- ================= SUCCESS POPUP ================= -->
+
+<div id="successModal" class="success-modal">
+
+    <div class="success-box">
+
+        <div class="success-icon">✅</div>
+
+        <h2>Registration Successful</h2>
+
+        <p>Your registration has been completed successfully.</p>
+
+        <div class="receipt">
+
+            <div class="row">
+                <span>Registration ID</span>
+                <strong id="popupRegId"></strong>
+            </div>
+
+            <div class="row">
+                <span>Name</span>
+                <strong id="popupName"></strong>
+            </div>
+
+            <div class="row">
+                <span>Competition</span>
+                <strong id="popupEvent"></strong>
+            </div>
+
+            <div class="row">
+                <span>Mobile Number</span>
+                <strong id="popupMobile"></strong>
+            </div>
+
+        </div>
+
+        <button
+            type="button"
+            id="closePopup"
+            class="popup-btn">
+
+            OK
+
+        </button>
+
+    </div>
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
+
+<script src="js/sheets.js"></script>
+
+<script src="js/registration.js"></script>
+
+</body>
+
+</html>

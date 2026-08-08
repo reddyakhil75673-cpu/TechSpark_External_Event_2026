@@ -1,0 +1,87 @@
+/* ================================
+        COORDINATORS SECTION
+================================ */
+
+.coordinators{
+    padding:100px 8%;
+    background:#071221;
+}
+
+.coordinator-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:35px;
+    margin-top:60px;
+}
+
+.coordinator-card{
+    background:rgba(255,255,255,0.05);
+    border:1px solid rgba(255,255,255,0.08);
+    backdrop-filter:blur(18px);
+    border-radius:25px;
+    padding:35px;
+    text-align:center;
+    transition:0.4s;
+}
+
+.coordinator-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 0 30px rgba(0,217,255,0.35);
+}
+
+.card-top{
+    width:90px;
+    height:90px;
+    margin:0 auto 25px;
+    border-radius:50%;
+    background:#00d9ff;
+    color:#000;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:36px;
+}
+
+.coordinator-card h3{
+    font-size:24px;
+    margin-bottom:10px;
+    color:#fff;
+}
+
+.coordinator-card h4{
+    color:#00d9ff;
+    margin-bottom:20px;
+    font-size:18px;
+}
+
+.call-btn,
+.whatsapp-btn{
+    display:block;
+    width:100%;
+    padding:12px;
+    margin-top:12px;
+    border-radius:30px;
+    text-decoration:none;
+    font-weight:600;
+    transition:.3s;
+}
+
+.call-btn{
+    background:#00d9ff;
+    color:#000;
+}
+
+.call-btn:hover{
+    background:#00b8d4;
+    transform:scale(1.03);
+}
+
+.whatsapp-btn{
+    background:#25D366;
+    color:#fff;
+}
+
+.whatsapp-btn:hover{
+    background:#1ea952;
+    transform:scale(1.03);
+}
