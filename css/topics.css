@@ -1,0 +1,554 @@
+/* =========================================
+   TECHSPARK TOPICS PAGE
+========================================= */
+
+.topics-hero {
+    min-height: 48vh;
+    padding: 150px 20px 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.topics-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 18px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: #60a5fa;
+    background: rgba(59, 130, 246, 0.08);
+    margin-bottom: 22px;
+}
+
+.topics-hero h1 {
+    margin: 0;
+    max-width: 900px;
+    font-size: clamp(42px, 7vw, 78px);
+    line-height: 1.05;
+    font-weight: 800;
+    color: #ffffff;
+}
+
+.topics-hero h1 span {
+    display: block;
+    background: linear-gradient(
+        90deg,
+        #38bdf8,
+        #818cf8,
+        #c084fc
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.topics-hero p {
+    max-width: 700px;
+    margin: 24px auto 0;
+    color: #cbd5e1;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   TOPICS SECTION
+========================================= */
+
+.topics-section {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 20px 100px;
+}
+
+.topics-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+}
+
+
+/* =========================================
+   TOPIC CARD
+========================================= */
+
+.topic-card {
+    position: relative;
+    overflow: hidden;
+
+    border: 1px solid rgba(148, 163, 184, 0.18);
+    border-radius: 22px;
+
+    background: rgba(15, 23, 42, 0.72);
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.22);
+
+    backdrop-filter: blur(14px);
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.topic-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(96, 165, 250, 0.45);
+
+    box-shadow:
+        0 25px 60px rgba(0, 0, 0, 0.28);
+}
+
+
+/* =========================================
+   CARD HEADER
+========================================= */
+
+.topic-card-header {
+    min-height: 125px;
+
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+
+    gap: 18px;
+
+    padding: 24px;
+}
+
+.topic-icon {
+    width: 58px;
+    height: 58px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 16px;
+
+    background: rgba(59, 130, 246, 0.12);
+
+    font-size: 28px;
+
+    flex-shrink: 0;
+}
+
+.topic-card-header h2 {
+    margin: 0 0 7px;
+
+    font-size: 23px;
+    line-height: 1.25;
+
+    color: #ffffff;
+}
+
+.topic-card-header p {
+    margin: 0;
+
+    color: #94a3b8;
+
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+
+/* =========================================
+   VIEW TOPICS BUTTON
+========================================= */
+
+.topic-toggle {
+    border: 1px solid rgba(96, 165, 250, 0.3);
+
+    background: rgba(59, 130, 246, 0.08);
+
+    color: #60a5fa;
+
+    padding: 10px 14px;
+
+    border-radius: 10px;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    white-space: nowrap;
+
+    transition:
+        background 0.25s ease,
+        color 0.25s ease,
+        transform 0.25s ease;
+}
+
+.topic-toggle:hover {
+    background: rgba(59, 130, 246, 0.18);
+}
+
+.topic-toggle span {
+    margin-left: 5px;
+}
+
+
+/* =========================================
+   EXPANDABLE CONTENT
+========================================= */
+
+.topic-content {
+    max-height: 0;
+
+    overflow: hidden;
+
+    opacity: 0;
+
+    padding: 0 24px;
+
+    border-top: 1px solid transparent;
+
+    transition:
+        max-height 0.45s ease,
+        opacity 0.3s ease,
+        padding 0.45s ease,
+        border-color 0.3s ease;
+}
+
+.topic-card.expanded .topic-content {
+    max-height: 1000px;
+
+    opacity: 1;
+
+    padding: 0 24px 26px;
+
+    border-top-color:
+        rgba(148, 163, 184, 0.12);
+}
+
+
+/* =========================================
+   TOPIC LIST
+========================================= */
+
+.topic-content ol,
+.topic-content ul {
+    margin: 22px 0 0;
+    padding-left: 22px;
+}
+
+.topic-content li {
+    margin-bottom: 18px;
+
+    color: #cbd5e1;
+
+    line-height: 1.65;
+}
+
+.topic-content li:last-child {
+    margin-bottom: 0;
+}
+
+.topic-content li strong {
+    display: block;
+
+    margin-bottom: 4px;
+
+    color: #f8fafc;
+
+    font-size: 15px;
+}
+
+.topic-content li span {
+    display: block;
+
+    color: #94a3b8;
+
+    font-size: 14px;
+}
+
+
+/* =========================================
+   FIND CODE / BLIND CODE
+========================================= */
+
+.topic-content p {
+    margin: 22px 0 20px;
+
+    color: #cbd5e1;
+
+    line-height: 1.7;
+}
+
+.topic-content h3 {
+    margin: 0 0 14px;
+
+    color: #f8fafc;
+
+    font-size: 17px;
+}
+
+.language-tags {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+}
+
+.language-tags span {
+    padding: 7px 12px;
+
+    border-radius: 999px;
+
+    background: rgba(96, 165, 250, 0.1);
+
+    border: 1px solid rgba(96, 165, 250, 0.2);
+
+    color: #93c5fd;
+
+    font-size: 13px;
+
+    font-weight: 600;
+}
+
+
+/* =========================================
+   HACKATHON
+========================================= */
+
+.hackathon-card {
+    grid-column: 1 / -1;
+}
+
+.hackathon-message {
+    padding: 0 24px 28px;
+
+    text-align: center;
+}
+
+.live-dot {
+    width: 10px;
+    height: 10px;
+
+    margin: 4px auto 14px;
+
+    border-radius: 50%;
+
+    background: #ef4444;
+
+    box-shadow:
+        0 0 0 6px rgba(239, 68, 68, 0.1),
+        0 0 18px rgba(239, 68, 68, 0.55);
+}
+
+.hackathon-message h3 {
+    margin: 0 0 8px;
+
+    color: #ffffff;
+
+    font-size: 19px;
+}
+
+.hackathon-message p {
+    margin: 0;
+
+    color: #94a3b8;
+
+    font-size: 14px;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.site-footer {
+    padding: 30px 20px;
+
+    text-align: center;
+
+    border-top: 1px solid rgba(148, 163, 184, 0.12);
+}
+
+.site-footer p {
+    margin: 0;
+
+    color: #94a3b8;
+
+    font-size: 14px;
+}
+
+
+/* =========================================
+   LIGHT THEME
+========================================= */
+
+body.light-theme .topics-badge {
+    border-color: rgba(30, 41, 59, 0.12);
+
+    background: rgba(59, 130, 246, 0.06);
+
+    color: #2563eb;
+}
+
+body.light-theme .topics-hero h1 {
+    color: #0f172a;
+}
+
+body.light-theme .topics-hero p {
+    color: #475569;
+}
+
+body.light-theme .topic-card {
+    background: rgba(255, 255, 255, 0.92);
+
+    border-color: rgba(15, 23, 42, 0.1);
+
+    box-shadow:
+        0 18px 45px rgba(15, 23, 42, 0.08);
+}
+
+body.light-theme .topic-card:hover {
+    border-color: rgba(37, 99, 235, 0.3);
+
+    box-shadow:
+        0 22px 50px rgba(15, 23, 42, 0.12);
+}
+
+body.light-theme .topic-card-header h2 {
+    color: #0f172a;
+}
+
+body.light-theme .topic-card-header p {
+    color: #64748b;
+}
+
+body.light-theme .topic-content {
+    border-top-color: transparent;
+}
+
+body.light-theme .topic-card.expanded .topic-content {
+    border-top-color: rgba(15, 23, 42, 0.08);
+}
+
+body.light-theme .topic-content li {
+    color: #334155;
+}
+
+body.light-theme .topic-content li strong {
+    color: #0f172a;
+}
+
+body.light-theme .topic-content li span {
+    color: #64748b;
+}
+
+body.light-theme .topic-content p {
+    color: #334155;
+}
+
+body.light-theme .topic-content h3 {
+    color: #0f172a;
+}
+
+body.light-theme .hackathon-message h3 {
+    color: #0f172a;
+}
+
+body.light-theme .hackathon-message p {
+    color: #64748b;
+}
+
+body.light-theme .site-footer {
+    border-top-color: rgba(15, 23, 42, 0.08);
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+    .topics-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hackathon-card {
+        grid-column: auto;
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .topics-hero {
+        min-height: 42vh;
+
+        padding:
+            130px
+            18px
+            55px;
+    }
+
+    .topics-hero h1 {
+        font-size: 42px;
+    }
+
+    .topics-hero p {
+        font-size: 16px;
+    }
+
+    .topics-section {
+        padding:
+            10px
+            14px
+            70px;
+    }
+
+    .topic-card-header {
+        grid-template-columns:
+            auto 1fr;
+
+        padding: 20px;
+    }
+
+    .topic-toggle {
+        grid-column: 1 / -1;
+
+        width: 100%;
+    }
+
+    .topic-icon {
+        width: 50px;
+        height: 50px;
+
+        font-size: 24px;
+    }
+
+    .topic-card-header h2 {
+        font-size: 20px;
+    }
+
+    .topic-content {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .topic-card.expanded .topic-content {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+}
